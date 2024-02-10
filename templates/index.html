@@ -1,7 +1,20 @@
-<h1>Input your text below</h1>
+{% if user.is_authenticated %}
+<li><a href="logout">Logout</a></li>
+<br/>
+
+<h1>Welcome, {{ user.username|title }}</h1>
+
+<h3>Input your text below</h3>
 
 <form method="POST" action="counter">
     {% csrf_token %}
     <textarea name="text" rows="25" cols="100"> </textarea> <br>
     <input type="submit" />
 </form>
+
+{% else %}
+<li><a href="login">Login</a></li>
+<br/>
+<p>Please login</p>
+
+{% endif %}
