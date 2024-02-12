@@ -50,4 +50,9 @@ def login(request):
 
 def logout_user(request):
     logout(request)
-    return redirect('login')            
+    return redirect('login')
+
+def post(request,pk):
+    return render(request,"post.html",{'pk':pk})
+
+            

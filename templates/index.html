@@ -13,8 +13,12 @@
 </form>
 
 {% else %}
-<li><a href="login">Login</a></li>
+
+<h3><li><a href="{% url 'register' %}">Sign Up</a></li> </h3>
+
+<h3><li><a href="{% url 'login' %}">Login</a></li> </h3>
+
 <br/>
-<p>Please login</p>
+<h3>Please Sign Up/Login</h3>
 
 {% endif %}
