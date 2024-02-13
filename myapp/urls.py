@@ -7,7 +7,11 @@ urlpatterns = [
     path('register',views.register,name='register'),
     path('login',views.login,name='login'),
     path('logout',views.logout_user,name='logout_user'),
-    path('post/<str:pk>',views.post,name='post')
+    path('post/<str:pk>',views.post,name='post'),
+    path('operation',views.operation,name='operation'),
+    path('blog',views.blog,name='blog')
 ]
+
+
 
 

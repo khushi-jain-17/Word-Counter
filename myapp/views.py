@@ -3,6 +3,15 @@ from django.contrib.auth import authenticate, login as auth_login, logout
 from django.contrib.auth.models import User
 from django.contrib import messages
 
+def operation(request):
+    val1=int(request.POST['num1'])
+    val2=int(request.POST['num2'])
+    result=val1+val2
+    return render(request,"result.html",{'result':result})
+
+def  blog(request):
+    return render(request,'blog.html',{'name':'Navin'})
+
 def index(request):
     return render(request,'index.html')
 
